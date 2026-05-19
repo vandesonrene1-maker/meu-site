@@ -1,10 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Meu Site</title>
+
+<title>English Daily</title>
+
+<style>
+
+body {
+
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, black, #111);
+    color: white;
+    text-align: center;
+
+}
+
+nav {
+
+    background: #000;
+    padding: 20px;
+
+}
+
+nav a {
+
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+
+}
+
+nav a:hover {
+
+    color: cyan;
+
+}
+
+.hero {
+
+    padding: 100px 20px;
+
+}
+
+h1 {
+
+    font-size: 70px;
+    color: cyan;
+    text-shadow: 0px 0px 20px cyan;
+
+}
+
+p {
+
+    font-size: 24px;
+
+}
+
+button {
+
+    background: cyan;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    background: white;
+
+}
+
+.cards {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+
+.card {
+
+    background: #111;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px cyan;
+
+}
+
+footer {
+
+    background: #000;
+    padding: 20px;
+    margin-top: 80px;
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <h1>Meu site está funcionando 🚀</h1>
+
+<nav>
+
+<a href="#">Início</a>
+<a href="#">Palavras</a>
+<a href="#">Quiz</a>
+<a href="#">Contato</a>
+
+</nav>
+
+<div class="hero">
+
+<h1>
+English Daily 🇺🇸
+</h1>
+
+<p>
+Aprenda inglês todos os dias.
+</p>
+
+<button onclick="mensagem()">
+Começar
+</button>
+
+</div>
+
+<section class="cards">
+
+<div class="card">
+
+<h2>Palavra do Dia</h2>
+
+<p>
+Dream = Sonho
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Frase</h2>
+
+<p>
+Good Morning = Bom dia
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Quiz</h2>
+
+<p>
+House significa casa.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+Criado por Vandeson 🚀
+
+</footer>
+
+<script>
+
+function mensagem() {
+
+    alert("Bem-vindo ao English Daily!")
+
+}
+
+</script>
+
 </body>
+
 </html>
