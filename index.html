@@ -1,319 +1,207 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Streetwear Store</title>
 
-<meta charset="UTF-8">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body{
+      background:#0d0d0d;
+      color:white;
+    }
 
-<title>English Daily</title>
+    header{
+      height:100vh;
+      background:linear-gradient(
+      135deg,
+      #ff0066,
+      #6a00ff,
+      #00d9ff
+      );
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
 
-<style>
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
 
-body {
+    .hero p{
+      font-size:20px;
+      margin-bottom:30px;
+    }
 
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(to right, #000000, #111111);
-    color: white;
-    text-align: center;
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:white;
+      color:black;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:bold;
+      transition:0.3s;
+    }
 
-}
+    .btn:hover{
+      transform:scale(1.1);
+      background:#00d9ff;
+      color:white;
+    }
 
-nav {
+    .produtos{
+      padding:80px 20px;
+      text-align:center;
+    }
 
-    background: rgba(0,0,0,0.9);
-    padding: 20px;
-    position: sticky;
-    top: 0;
+    .produtos h2{
+      font-size:40px;
+      margin-bottom:50px;
+      color:#00d9ff;
+    }
 
-}
+    .cards{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
 
-nav a {
+    .card{
+      background:#1a1a1a;
+      border-radius:20px;
+      overflow:hidden;
+      width:300px;
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(0,217,255,0.2);
+    }
 
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 20px;
-    transition: 0.3s;
+    .card:hover{
+      transform:translateY(-10px);
+    }
 
-}
+    .card img{
+      width:100%;
+      height:350px;
+      object-fit:cover;
+    }
 
-nav a:hover {
+    .card h3{
+      margin:20px 0 10px;
+      font-size:24px;
+    }
 
-    color: cyan;
+    .preco{
+      color:#00ff99;
+      font-size:22px;
+      margin-bottom:20px;
+    }
 
-}
+    .comprar{
+      display:inline-block;
+      margin-bottom:25px;
+      padding:12px 25px;
+      background:#ff0066;
+      color:white;
+      text-decoration:none;
+      border-radius:25px;
+      transition:0.3s;
+    }
 
-.hero {
+    .comprar:hover{
+      background:#00d9ff;
+    }
 
-    padding: 100px 20px;
+    footer{
+      padding:30px;
+      text-align:center;
+      background:black;
+      color:#888;
+    }
 
-}
+    @media(max-width:768px){
 
-h1 {
+      .hero h1{
+        font-size:40px;
+      }
 
-    font-size: 80px;
-    color: cyan;
-    text-shadow: 0px 0px 20px cyan;
-    animation: brilho 2s infinite alternate;
-
-}
-
-@keyframes brilho {
-
-    from {
-
-        text-shadow: 0px 0px 10px cyan;
+      .hero p{
+        font-size:16px;
+      }
 
     }
 
-    to {
-
-        text-shadow: 0px 0px 30px cyan;
-
-    }
-
-}
-
-p {
-
-    font-size: 24px;
-
-}
-
-button {
-
-    background: cyan;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 12px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-
-}
-
-button:hover {
-
-    transform: scale(1.1);
-    background: white;
-
-}
-
-.foto {
-
-    width: 250px;
-    border-radius: 20px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 25px cyan;
-
-}
-
-.cards {
-
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 60px;
-
-}
-
-.card {
-
-    background: #111;
-    width: 260px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px cyan;
-    transition: 0.3s;
-
-}
-
-.card:hover {
-
-    transform: translateY(-10px);
-
-}
-
-iframe {
-
-    margin-top: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px cyan;
-
-}
-
-footer {
-
-    background: #000;
-    padding: 30px;
-    margin-top: 80px;
-
-}
-
-</style>
-
+  </style>
 </head>
 
 <body>
 
-<nav>
+  <header>
+    <div class="hero">
+      <h1>Streetwear</h1>
+      <p>DROP NOVO • ESTILO URBANO • LIMITED</p>
 
-<a href="#">Início</a>
-<a href="#">Palavras</a>
-<a href="#">Quiz</a>
-<a href="#">Vídeos</a>
-<a href="#">Contato</a>
+      <a class="btn" href="https://wa.me/seunumero">
+        Comprar Agora
+      </a>
+    </div>
+  </header>
 
-</nav>
+  <section class="produtos">
 
-<section class="hero">
+    <h2>Camisas em Destaque</h2>
 
-<h1>
-English Daily 🇺🇸
-</h1>
+    <div class="cards">
 
-<p>
-Aprenda inglês todos os dias.
-</p>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Oversized Black</h3>
+        <p class="preco">R$ 89,90</p>
 
-<img src="https://picsum.photos/300"
-class="foto">
+        <a class="comprar" href="https://wa.me/seunumero">
+          Comprar
+        </a>
+      </div>
 
-<br><br>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Urban Style</h3>
+        <p class="preco">R$ 99,90</p>
 
-<button onclick="mensagem()">
-Começar
-</button>
+        <a class="comprar" href="https://wa.me/seunumero">
+          Comprar
+        </a>
+      </div>
 
-</section>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Limited Drop</h3>
+        <p class="preco">R$ 109,90</p>
 
-<section class="cards">
+        <a class="comprar" href="https://wa.me/seunumero">
+          Comprar
+        </a>
+      </div>
 
-<div class="card">
+    </div>
 
-<h2>
-📚 Palavra do Dia
-</h2>
+  </section>
 
-<p>
-Dream = Sonho
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>
-💬 Frase
-</h2>
-
-<p>
-Good Morning = Bom dia
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>
-🧠 Quiz
-</h2>
-
-<p>
-House significa casa.
-</p>
-
-</div>
-
-</section>
-
-<br><br>
-
-<h2>
-🎥 Vídeo para aprender inglês
-</h2>
-
-<iframe width="560"
-height="315"
-src="https://www.youtube.com/embed/HG68Ymazo18">
-</iframe>
-
-<br><br>
-
-<h2 id="relogio"></h2>
-
-<button onclick="clicou()">
-Curtir 👍
-</button>
-
-<p id="contador">
-Cliques: 0
-</p>
-
-<br><br>
-
-<h2>
-🎵 Música
-</h2>
-
-<audio controls>
-
-<source src=""
-type="audio/mpeg">
-
-</audio>
-
-<footer>
-
-<h2>
-Criado por Vandeson 🚀
-</h2>
-
-<p>
-English Daily © 2026
-</p>
-
-</footer>
-
-<script>
-
-function mensagem() {
-
-    alert("Bem-vindo ao English Daily!")
-
-}
-
-let cliques = 0
-
-function clicou() {
-
-    cliques++
-
-    document.getElementById("contador")
-    .innerHTML = "Cliques: " + cliques
-
-}
-
-function atualizarRelogio() {
-
-    let agora = new Date()
-
-    let hora = agora.toLocaleTimeString()
-
-    document.getElementById("relogio")
-    .innerHTML = hora
-
-}
-
-setInterval(atualizarRelogio, 1000)
-
-</script>
+  <footer>
+    © 2026 Streetwear Store • Todos os direitos reservados
+  </footer>
 
 </body>
-
 </html>
