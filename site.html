@@ -1,284 +1,285 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>English Daily</title>
 
 <style>
 
-body {
-
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(to right, #000000, #111111);
-    color: white;
-    text-align: center;
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-nav {
-
-    background: rgba(0,0,0,0.9);
-    padding: 20px;
-    position: sticky;
-    top: 0;
-
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#000000,#111111,#001f3f);
+    color:white;
+    text-align:center;
 }
 
-nav a {
-
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 20px;
-    transition: 0.3s;
-
+nav{
+    background:rgba(0,0,0,0.95);
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-nav a:hover {
-
-    color: cyan;
-
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    transition:0.3s;
 }
 
-.hero {
-
-    padding: 100px 20px;
-
+nav a:hover{
+    color:cyan;
 }
 
-h1 {
-
-    font-size: 80px;
-    color: cyan;
-    text-shadow: 0px 0px 20px cyan;
-    animation: brilho 2s infinite alternate;
-
+.hero{
+    padding:80px 20px;
 }
 
-@keyframes brilho {
+h1{
+    font-size:70px;
+    color:cyan;
+    text-shadow:0 0 20px cyan;
+    animation:brilho 2s infinite alternate;
+}
 
-    from {
+@keyframes brilho{
+    from{
+        text-shadow:0 0 10px cyan;
+    }
+    to{
+        text-shadow:0 0 35px cyan;
+    }
+}
 
-        text-shadow: 0px 0px 10px cyan;
+.hero p{
+    font-size:24px;
+    margin-top:15px;
+}
 
+.foto{
+    width:280px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 0 25px cyan;
+}
+
+button{
+    background:cyan;
+    color:black;
+    border:none;
+    padding:15px 35px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:white;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px 20px;
+}
+
+.card{
+    background:#111;
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 15px cyan;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:cyan;
+    margin-bottom:10px;
+}
+
+#relogio{
+    color:cyan;
+    font-size:40px;
+    margin-top:20px;
+}
+
+.quiz{
+    margin-top:40px;
+}
+
+footer{
+    background:black;
+    padding:40px;
+    margin-top:60px;
+}
+
+footer h3{
+    color:cyan;
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:45px;
     }
 
-    to {
-
-        text-shadow: 0px 0px 30px cyan;
-
+    .hero p{
+        font-size:20px;
     }
 
-}
-
-p {
-
-    font-size: 24px;
-
-}
-
-button {
-
-    background: cyan;
-    color: black;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 12px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-
-}
-
-button:hover {
-
-    transform: scale(1.1);
-    background: white;
-
-}
-
-.foto {
-
-    width: 250px;
-    border-radius: 20px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 25px cyan;
-
-}
-
-.cards {
-
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 60px;
-
-}
-
-.card {
-
-    background: #111;
-    width: 260px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px cyan;
-    transition: 0.3s;
-
-}
-
-.card:hover {
-
-    transform: translateY(-10px);
-
-}
-
-footer {
-
-    background: #000;
-    padding: 30px;
-    margin-top: 80px;
+    .foto{
+        width:220px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
 <a href="#">Início</a>
 <a href="#">Palavras</a>
+<a href="#">Frases</a>
 <a href="#">Quiz</a>
 <a href="#">Contato</a>
-
 </nav>
 
 <div class="hero">
 
-<h1>
-English Daily 🇺🇸
-</h1>
+<h1>English Daily 🇺🇸</h1>
 
-<p>
-Aprenda inglês todos os dias.
-</p>
-    <img class="foto"
+<p>Aprenda inglês todos os dias de forma simples e divertida.</p>
+
+<img class="foto"
 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500">
 
-<br><br>
+<br>
 
-<button onclick="mensagem()">
-Começar
-</button>
+<button onclick="mensagem()">Começar Agora</button>
 
 </div>
 
 <section class="cards">
 
 <div class="card">
-
-<h2>Palavra do Dia</h2>
-
-<p>
-Dream = Sonho
-</p>
-
+<h2>📖 Palavra do Dia</h2>
+<p id="palavra"></p>
 </div>
 
 <div class="card">
-
-<h2>Frase</h2>
-
-<p>
-Good Morning = Bom dia
-</p>
-
+<h2>💬 Frase do Dia</h2>
+<p>Good morning = Bom dia</p>
 </div>
 
 <div class="card">
-
-<h2>Quiz</h2>
-
-<p>
-House significa casa.
-</p>
-
+<h2>🔥 Expressão</h2>
+<p>What's up? = E aí?</p>
 </div>
 
 </section>
 
+<div class="quiz">
+
+<h2>Quiz Rápido</h2>
+
+<p>House significa:</p>
+
+<button onclick="quizCerto()">Casa</button>
+
+<button onclick="quizErrado()">Carro</button>
+
+<p id="resultadoQuiz"></p>
+
+</div>
+
 <h2 id="relogio"></h2>
 
-<button onclick="clicou()">
-Curtir 👍
-</button>
+<br>
 
-<p id="contador">
-Cliques: 0
-</p>
+<button onclick="clicou()">Curtir 👍</button>
+
+<p id="contador">Cliques: 0</p>
 
 <footer>
 
-<footer>
 <h3>English Daily 🇺🇸</h3>
+
 <p>Aprenda inglês todos os dias.</p>
+
 <p>Criado por Vandeson 🚀</p>
-</footer>
 
 </footer>
 
 <script>
 
-function mensagem() {
-
-    alert("Bem-vindo ao English Daily!")
-
+function mensagem(){
+    alert("Bem-vindo ao English Daily!");
 }
 
-let cliques = 0
+let cliques = 0;
 
-function clicou() {
-
-    cliques++
-
-    document.getElementById("contador")
-    .innerHTML = "Cliques: " + cliques
-
+function clicou(){
+    cliques++;
+    document.getElementById("contador").innerHTML =
+    "Cliques: " + cliques;
 }
 
-function atualizarRelogio() {
-
-    let agora = new Date()
-
-    let hora = agora.toLocaleTimeString()
-
-    document.getElementById("relogio")
-    .innerHTML = hora
-
+function atualizarRelogio(){
+    let agora = new Date();
+    document.getElementById("relogio").innerHTML =
+    agora.toLocaleTimeString();
 }
 
-setInterval(atualizarRelogio, 1000)
+setInterval(atualizarRelogio,1000);
+
+const palavras = [
+"Dream = Sonho",
+"Friend = Amigo",
+"Book = Livro",
+"School = Escola",
+"House = Casa",
+"Water = Água",
+"Happy = Feliz",
+"Work = Trabalho"
+];
+
+document.getElementById("palavra").innerHTML =
+palavras[Math.floor(Math.random()*palavras.length)];
+
+function quizCerto(){
+    document.getElementById("resultadoQuiz").innerHTML =
+    "✅ Correto!";
+}
+
+function quizErrado(){
+    document.getElementById("resultadoQuiz").innerHTML =
+    "❌ Tente novamente!";
+}
 
 </script>
 
 </body>
-
 </html>
-<section class="cards">
-
-<div class="card">
-<h2>Expressão</h2>
-<p>What's up? = E aí?</p>
-</div>
-
-<div class="card">
-<h2>Expressão</h2>
-<p>See you later = Até mais</p>
-</div>
-
-</section>
